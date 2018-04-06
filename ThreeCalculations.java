@@ -8,15 +8,14 @@ import java.util.Scanner;
 class ThreeCalculations extends TwoCalculations {
 
     private BigDecimal fourthNumber;
-    private String thirdCalculation;
 
     void askUserForThirdOperator() {
         Scanner userCalculation = new Scanner(System.in);
 
         System.out.print("Please enter what you want to do: add ( + ), subtract ( - ), multiply ( * ), divide ( / ): ");
-        thirdCalculation = userCalculation.next();
+        calculation = userCalculation.next();
 
-        switch (thirdCalculation) {
+        switch (calculation) {
             case "add":
             case "+":
                 askUserForFourthNumber();
@@ -55,21 +54,21 @@ class ThreeCalculations extends TwoCalculations {
     private void resultOfThirdCalculation() {
         BigDecimal thirdResult;
 
-        switch (thirdCalculation) {
+        switch (calculation) {
             case "add":
             case "+":
                 thirdResult = getSecondResult().add(fourthNumber);
-                System.out.println(getSecondResult() + " " + thirdCalculation + " " + fourthNumber + " = " + thirdResult);
+                System.out.println(getSecondResult() + " " + calculation + " " + fourthNumber + " = " + thirdResult);
                 break;
             case "subtract":
             case "-":
                 thirdResult = getSecondResult().subtract(fourthNumber);
-                System.out.println(getSecondResult() + " " + thirdCalculation + " " + fourthNumber + " = " + thirdResult);
+                System.out.println(getSecondResult() + " " + calculation + " " + fourthNumber + " = " + thirdResult);
                 break;
             case "multiply":
             case "*":
                 thirdResult = getSecondResult().multiply(fourthNumber);
-                System.out.println(getSecondResult() + " " + thirdCalculation + " " + fourthNumber + " = " + thirdResult);
+                System.out.println(getSecondResult() + " " + calculation + " " + fourthNumber + " = " + thirdResult);
                 break;
             case "divide":
             case "/":
@@ -78,7 +77,7 @@ class ThreeCalculations extends TwoCalculations {
                     askUserForFourthNumber();
                 } else {
                     thirdResult = getSecondResult().divide(fourthNumber, 3, RoundingMode.HALF_UP);
-                    System.out.println(getSecondResult() + " " + thirdCalculation + " " + fourthNumber + " = " + thirdResult);
+                    System.out.println(getSecondResult() + " " + calculation + " " + fourthNumber + " = " + thirdResult);
                 }
         }
     }

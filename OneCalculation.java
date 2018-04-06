@@ -7,7 +7,7 @@ import java.util.Scanner;
 class OneCalculation extends StartCalculator {
 
     private BigDecimal firstNumber, secondNumber, result;
-    private String calculation;
+    String calculation;
 
     BigDecimal getResult() {
         return result;
