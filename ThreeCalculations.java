@@ -13,7 +13,7 @@ class ThreeCalculations extends TwoCalculations {
     void askUserForThirdOperator() {
         Scanner userCalculation = new Scanner(System.in);
 
-        System.out.print("Testing. Please enter what you want to do: add ( + ), subtract ( - ), multiply ( * ), divide ( / ): ");
+        System.out.print("Please enter what you want to do: add ( + ), subtract ( - ), multiply ( * ), divide ( / ): ");
         thirdCalculation = userCalculation.next();
 
         switch (thirdCalculation) {
