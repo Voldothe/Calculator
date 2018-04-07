@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
 
-
 class ThreeCalculations extends TwoCalculations {
 
     private BigDecimal fourthNumber;
